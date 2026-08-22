@@ -1,4 +1,4 @@
-/* Copyright 2026 上海如静知华信息科技有限公司 */
+/* Copyright 2026 上海如静知华信息科技有限公司 · https://www.zhuatech.cn/ */
 export const domain={
  code:'INVENTORYAI',systemName:'知华智能库存优化平台',englishName:'AI INVENTORY OPTIMIZATION',theme:{primary:'#3f6a63',dark:'#243e3a',accent:'#cb8444'},workspace:'供应链中心 / 库存策略组',fieldWorkspace:'华东物流中心 / 库存分析组',period:'2026-08-19 · 滚动分析',liveText:'WMS 与需求数据于 10:38 更新',fieldContextLabel:'分析范围',fieldContext:'华东仓群 · 消费品',fieldUser:'林澈',fieldRole:'库存分析师',adminUser:'苏岚',adminRole:'供应链计划负责人',
  adminTitle:'库存健康运营中心',adminBreadcrumb:'供应链 / 智能库存',adminSubtitle:'连接库存、在途、需求、交期与效期数据，生成补货、持有、减量和处置建议。',exportAction:'导出库存报告',createAction:'新建分析任务',chartTitle:'库存健康改善趋势',chartSubtitle:'健康 SKU 比例 / 运营目标',chartLabels:['W27','W28','W29','W30','W31','W32','W33','W34','W35'],loadTitle:'仓群库存负荷',loadSubtitle:'异常 SKU 占分析能力',recordsTitle:'重点库存优化任务',recordsSubtitle:'按缺货、滞销、临期和资金占用排序',issueTitle:'库存风险事件',issueSubtitle:'需要采购、销售或财务共同决策',
