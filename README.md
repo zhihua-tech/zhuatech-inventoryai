@@ -54,3 +54,7 @@ npm run dev:demo
 | ![微信咨询一](docs/images/zhuatech-wechat-consulting.png) | ![微信咨询二](docs/images/zhuatech-wechat-consulting-2.png) |
 
 SEO：智能库存、库存优化、AI 补货、滞销库存、临期管理、Java Vue 源码、知华科技。
+
+## 企业级智能补货发布
+
+新增 `POST /api/enterprise/inventoryai/replenishment-plan-release`，覆盖库存、供应、提前期、安全库存、预算、风险、审批和撤回，返回 `RELEASE / PLANNER_REVIEW / BLOCKED`。详见 [补货发布说明](docs/ENTERPRISE_REPLENISHMENT_RELEASE.md)。
