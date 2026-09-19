@@ -12,9 +12,16 @@ import java.math.RoundingMode;
 import java.util.ArrayList;
 import java.util.List;
 
-/** 结合库存覆盖、交期、滞销和保质期信号生成库存动作。 */
+/**
+ * 结合库存覆盖、交期、滞销和保质期信号生成库存动作。
+ *
+ * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+ */
 @Service
 public class InventoryAnalysisService {
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public Result optimize(Request request) {
         BigDecimal available = request.onHand().add(request.inbound());
         BigDecimal coverDays = request.averageDailyDemand().signum() == 0 ? new BigDecimal("999")
@@ -39,6 +46,9 @@ public class InventoryAnalysisService {
             reorderQty, slowMovingScore, action, reasons, "LIQUIDATE".equals(action));
     }
 
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public record Request(@NotBlank String skuCode,
                           @DecimalMin("0") BigDecimal onHand,
                           @DecimalMin("0") BigDecimal inbound,
@@ -46,6 +56,9 @@ public class InventoryAnalysisService {
                           @Min(1) int leadTimeDays, @Min(0) int daysSinceLastSale,
                           @Min(0) int shelfLifeRemainingDays,
                           @DecimalMin("0") @DecimalMax("1") BigDecimal marginRate) {}
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public record Result(String skuCode, BigDecimal inventoryCoverDays, BigDecimal reorderPoint,
                          int recommendedReorderQuantity, int slowMovingRiskScore,
                          String action, List<String> reasons, boolean approvalRequired) {}

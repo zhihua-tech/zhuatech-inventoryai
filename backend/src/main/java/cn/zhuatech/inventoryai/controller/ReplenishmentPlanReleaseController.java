@@ -6,11 +6,20 @@ import cn.zhuatech.inventoryai.service.ReplenishmentPlanReleaseService;
 import jakarta.validation.Valid;
 import org.springframework.web.bind.annotation.*;
 
+/**
+ * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+ */
 @RestController
 @RequestMapping("/api/enterprise/inventoryai")
 public class ReplenishmentPlanReleaseController {
     private final ReplenishmentPlanReleaseService service;
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public ReplenishmentPlanReleaseController(ReplenishmentPlanReleaseService service) { this.service = service; }
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     @PostMapping("/replenishment-plan-release")
     public ApiResponse<ReplenishmentPlanReleaseService.Assessment> assess(
             @Valid @RequestBody ReplenishmentPlanReleaseService.Request request) {

@@ -7,12 +7,21 @@ import jakarta.validation.Valid;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
+/**
+ * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+ */
 @RestController
 @RequestMapping("/api/ai/inventory")
 @PreAuthorize("hasAnyRole('DOMAIN_USER','DOMAIN_OPERATOR','ADMIN')")
 public class InventoryAnalysisController {
     private final InventoryAnalysisService service;
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public InventoryAnalysisController(InventoryAnalysisService service) { this.service = service; }
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     @PostMapping("/optimize")
     public ApiResponse<InventoryAnalysisService.Result> optimize(@Valid @RequestBody InventoryAnalysisService.Request request) {
         return ApiResponse.ok("库存健康分析完成", service.optimize(request));
